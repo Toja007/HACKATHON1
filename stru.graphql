@@ -1,0 +1,18 @@
+my_project/
+│
+├── model/                  # Directory to store your pickle file
+│   └── stacked_model.pkl
+│
+├── static/                 # Directory for static files (e.g., CSS, JS)
+│   └── average_score_chart.png
+│
+├── templates/              # Directory for HTML files (Flask uses 'templates')
+│   └── frontend.html
+│
+├── backend.py                  # Flask application (backend logic)
+│
+├── render.yaml              # Vercel configuration file
+│
+├── requirements.txt        # List of dependencies (Flask, scikit-learn, etc.)
+│
+└── README.md               # Optional - Project readme
