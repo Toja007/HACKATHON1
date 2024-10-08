@@ -1,15 +1,12 @@
-# Specify the build and service configurations
 buildCommand: |
-  pip install --upgrade pip setuptools wheel  # Upgrade essential tools
-  pip install -r requirements.txt  # Install the dependencies
+  pip install --upgrade pip setuptools wheel
+  pip install -r requirements.txt
 
 services:
-  - type: web  # Define the service type
-    name: students-performance-tracker  # Name of the service
-    env: python  # Specify the environment
-    plan: free  # Use the free plan
-    buildCommand: |
-      pip install --upgrade pip setuptools wheel  # Upgrade essential tools
-      pip install -r requirements.txt  # Install the dependencies
-    startCommand: gunicorn wsgi:app --port $PORT --host 0.0.0.0  # Start command
-    runtime: python3.11  # Update to match your desired Python version
+  - type: web
+    name: students-performance-tracker
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:app --port $PORT --host 0.0.0.0
+    runtime: python3.9
