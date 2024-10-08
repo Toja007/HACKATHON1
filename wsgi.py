@@ -1,4 +1,4 @@
-from backend import app  # Import your Flask app
+from backend import app 
 
 if __name__ == "__main__":
     app.run()
