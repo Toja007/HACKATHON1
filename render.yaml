@@ -8,5 +8,5 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn wsgi:app --port $PORT --host 0.0.0.0
+    startCommand: gunicorn wsgi:app --bind 0.0.0.0:$PORT
     runtime: python3.9
